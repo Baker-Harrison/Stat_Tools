@@ -4,7 +4,7 @@
 
 int main() {
 
-	vector<long long> numbers = {5, 10, 15, 20, 20, 40, 40};
+	vector<long long> numbers = {5, 10, 15, 40, 40, 20};
 
 	sort(numbers.begin(), numbers.end());
 
@@ -20,6 +20,7 @@ int main() {
 	cout << "Min: " << StatTools::getMin(numbers) << endl;
 	cout << "Mean: " << StatTools::getMean(numbers) << endl;
 	cout << "Median: " << StatTools::getMedian(numbers) << endl;
+	cout << "Mode: " << StatTools::getMode(numbers) << endl;
 	StatTools::printBarGraph(numbers);
 
 	cout << endl << endl << endl;

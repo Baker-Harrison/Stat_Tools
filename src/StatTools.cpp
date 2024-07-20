@@ -42,9 +42,39 @@ double StatTools::getMean(vector<long long int> listOfNumbers) {
 }
 
 long long StatTools::getMode(vector<long long int> listOfNumbers) {
-	long long mode;
-	mode = 0;
+	if (listOfNumbers.empty()) {
+		cout << "The list of numbers is empty." << endl;
+		return 0; // Return 0 or some indication of error for an empty list
+	}
 
+	long long mode = listOfNumbers[0];
+
+	vector<long long> runningTotalOfEach(1, 1); // Initialize with 1 for the first number
+	vector<long long> listOfUniqueNumbers;
+	listOfUniqueNumbers.push_back(listOfNumbers[0]);
+
+	long long num = listOfNumbers[0];
+	int count = 0;
+
+	for (int i = 1; i < listOfNumbers.size(); ++i) {
+		long long number = listOfNumbers[i];
+		if (num != number) {
+			count++;
+			runningTotalOfEach.push_back(1);
+			num = number;
+			listOfUniqueNumbers.push_back(number);
+		} else {
+			runningTotalOfEach[count] += 1;
+		}
+	}
+
+	int maxCount = getMax(runningTotalOfEach);
+	for (int i = 0; i < runningTotalOfEach.size(); ++i) {
+		if (runningTotalOfEach[i] == maxCount) {
+			mode = listOfUniqueNumbers[i];
+			break;
+		}
+	}
 
 	return mode;
 }
