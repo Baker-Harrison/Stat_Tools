@@ -44,12 +44,12 @@ double StatTools::getMean(vector<long long int> listOfNumbers) {
 long long StatTools::getMode(vector<long long int> listOfNumbers) {
 	if (listOfNumbers.empty()) {
 		cout << "The list of numbers is empty." << endl;
-		return 0; // Return 0 or some indication of error for an empty list
+		return 0; 
 	}
 
 	long long mode = listOfNumbers[0];
 
-	vector<long long> runningTotalOfEach(1, 1); // Initialize with 1 for the first number
+	vector<long long> runningTotalOfEach(1, 1); 
 	vector<long long> listOfUniqueNumbers;
 	listOfUniqueNumbers.push_back(listOfNumbers[0]);
 
