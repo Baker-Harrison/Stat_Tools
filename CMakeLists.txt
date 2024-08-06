@@ -4,5 +4,4 @@ project(Stat_Tools)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Stat_Tools main.cpp
-        src/StatTools.cpp
         include/StatTools.h)

@@ -4,26 +4,36 @@
 
 int main() {
 
-	vector<long long> numbers = {5, 10, 15, 40, 40, 20};
+	vector<long long> IntegerNumbers = {5, 10, 5};
+    vector<double> FloatingPointNumbers = {5.5, 10.5, 5.5, 10.5, 10.5};
 
-	sort(numbers.begin(), numbers.end());
+	sort(IntegerNumbers.begin(), IntegerNumbers.end());
 
-	int counter = 1;
-	for (long long number : numbers)
-	{
-		cout << "Number " << counter << ": " << number << endl;
-		counter++;
-	}
+    sort(FloatingPointNumbers.begin(), FloatingPointNumbers.end());
 
 
-	cout << "Max: " << StatTools::getMax(numbers) << endl;
-	cout << "Min: " << StatTools::getMin(numbers) << endl;
-	cout << "Mean: " << StatTools::getMean(numbers) << endl;
-	cout << "Median: " << StatTools::getMedian(numbers) << endl;
-	cout << "Mode: " << StatTools::getMode(numbers) << endl;
-	StatTools::printBarGraph(numbers);
+
+
+	cout << "Max Integer: " << StatTools::getMax(IntegerNumbers) << endl;
+    cout << "Max Floating Point: " << StatTools::getMax(FloatingPointNumbers) << endl;
+    cout << "Min Integer: " << StatTools::getMin(IntegerNumbers) << endl;
+    cout << "Min Floating Point: " << StatTools::getMin(FloatingPointNumbers) << endl;
+    cout << "Mean Integer: " << StatTools::getMean(IntegerNumbers) << endl;
+    cout << "Mean Floating Point: " << StatTools::getMean(FloatingPointNumbers) << endl;
+    cout << "Median Integer: " << StatTools::getMedian(IntegerNumbers) << endl;
+    cout << "Median Floating Point: " << StatTools::getMedian(FloatingPointNumbers) << endl;
+    cout << "Mode Integer: " << StatTools::getMode(IntegerNumbers) << endl;
+    cout << "Mode Floating Point: " << StatTools::getMode(FloatingPointNumbers) << endl;
+
+
+	StatTools::printBarGraph(IntegerNumbers);
+    StatTools::printBarGraph(FloatingPointNumbers);
+    cout << endl;
 
 	cout << endl << endl << endl;
-	StatTools::printStemAndLeaf(numbers);
+	StatTools::printStemAndLeaf(IntegerNumbers);
+    cout << endl;
+    StatTools::printStemAndLeaf(FloatingPointNumbers);
+
 	return 0;
 }

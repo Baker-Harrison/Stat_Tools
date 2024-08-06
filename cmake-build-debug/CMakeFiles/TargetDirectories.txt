@@ -1,3 +1,3 @@
-/Users/harrisonbaker/CLionProjects/Stat Tools/cmake-build-debug/CMakeFiles/Stat_Tools.dir
-/Users/harrisonbaker/CLionProjects/Stat Tools/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/harrisonbaker/CLionProjects/Stat Tools/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/thehe/CLionProjects/CPP/Stat_Tools/cmake-build-debug/CMakeFiles/Stat_Tools.dir
+C:/Users/thehe/CLionProjects/CPP/Stat_Tools/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/thehe/CLionProjects/CPP/Stat_Tools/cmake-build-debug/CMakeFiles/rebuild_cache.dir
